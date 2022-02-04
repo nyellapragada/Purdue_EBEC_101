@@ -1,0 +1,72 @@
+"""
+Author: Venkata Yellapragada, vyellapr@purdue.edu
+Assignment: 02.3 - Roulette Colors
+Date: 01/31/2022
+
+Description:
+    Asks user to choose pocket number then displays color
+    of pocket.
+
+Contributors:
+    NA
+
+My contributor(s) helped me:
+    [ ] understand the assignment expectations without
+        telling me how they will approach it.
+    [ ] understand different ways to think about a solution
+        without helping me plan my solution.
+    [ ] think through the meaning of a specific error or
+        bug present in my code without looking at my code.
+    Note that if you helped somebody else with their code, you
+    have to list that person as a contributor.
+
+Academic Integrity Statement:
+    I have not used source code obtained from any unauthorized
+    source, either modified or unmodified; nor have I provided
+    another student access to my code.  The project I am
+    submitting is my own original work.
+"""
+
+"""Import additional modules below this line (starting with unit 6)."""
+
+
+"""Write new functions below this line (starting with unit 4)."""
+
+
+def main():
+    pocket = float(input("Please choose a pocket number: ")) #takes user input for pocket number
+
+    color = "hello grader"
+
+    if (pocket < 0 or pocket > 36): #determines pocket color based on number range
+        print(f"  Invalid Input!")
+    elif (pocket == 0):
+        color = "green"
+    elif (1 <= pocket <= 10):
+        if (pocket % 2) == 0:
+            color = "black"
+        else:
+            color = "red"
+    elif (11 <= pocket <= 18):
+        if (pocket % 2) == 0:
+            color = "red"
+        else:
+            color = "black"
+    elif (19 <= pocket <= 28):
+        if (pocket % 2) == 0:
+            color = "black"
+        else: 
+            color = "red"
+    elif (29 <= pocket <= 36):
+        if (pocket % 2) == 0:
+            color = "red"
+        else:
+            color = "black"
+    
+    if (pocket >= 0 and pocket <= 36):
+        print(f"  Pocket number {pocket:.0f} is {color}.")
+
+
+"""Do not change anything below this line."""
+if __name__ == "__main__":
+    main()
